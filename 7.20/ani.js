@@ -1,7 +1,6 @@
 
 function animate(obj, attrObj, duration, fn,callback) {
     clearInterval(obj.t);
-    //参数初始化 webstorm
     if (obj.nodeType != 1) {
         console.error("对象的类型不对")
         return;
@@ -11,7 +10,6 @@ function animate(obj, attrObj, duration, fn,callback) {
     var time = 0;
     var fn = fn || Tween.Linear;
     console.log(fn)
-
     //获取每个属性的初始值
     for (var i in attrObj) {
         start[i] = css(obj,i);
